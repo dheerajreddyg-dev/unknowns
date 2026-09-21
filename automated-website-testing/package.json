@@ -1,0 +1,31 @@
+{
+  "name": "automated-website-testing",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Automated testing suite for multiple websites using Playwright",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test-website.js",
+    "test:website": "node test-website.js",
+    "analyze": "node accessibility-analyzer.js"
+  },
+  "keywords": [
+    "playwright",
+    "testing",
+    "automation",
+    "e2e"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.25.0",
+    "dotenv": "^16.3.1"
+  },
+  "dependencies": {
+    "fs-extra": "^11.1.1",
+    "json2csv": "^5.0.7",
+    "playwright": "^1.40.0",
+    "xml2js": "^0.6.2",
+    "exceljs": "^4.4.0"
+  }
+}

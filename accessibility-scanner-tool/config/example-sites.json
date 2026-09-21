@@ -1,0 +1,58 @@
+{
+  "sites": [
+    {
+      "siteId": "example-site",
+      "name": "Example Website",
+      "baseUrl": "https://example.com",
+      "sitemapUrl": "https://example.com/sitemap.xml",
+      "includePatterns": [".*"],
+      "excludePatterns": [
+        ".*\\/wp-admin\\/.*",
+        ".*\\/login\\/.*",
+        ".*\\/admin\\/.*"
+      ],
+      "maxDepth": 2,
+      "maxPages": 10,
+      "axeTags": ["wcag2a", "wcag2aa", "wcag21aa"],
+      "politeDelayMs": 1000,
+      "concurrency": 2,
+      "pageTimeoutMs": 30000
+    },
+    {
+      "siteId": "comprehensive-audit",
+      "name": "Full Site Accessibility Audit",
+      "baseUrl": "https://your-website.com",
+      "sitemapUrl": "https://your-website.com/sitemap.xml",
+      "includePatterns": [
+        ".*\\/products\\/.*",
+        ".*\\/services\\/.*",
+        ".*\\/about.*",
+        ".*\\/contact.*"
+      ],
+      "excludePatterns": [
+        ".*\\/api\\/.*",
+        ".*\\/admin\\/.*",
+        ".*\\.(pdf|doc|docx|xls|xlsx)$"
+      ],
+      "maxDepth": 3,
+      "maxPages": 50,
+      "axeTags": ["wcag2a", "wcag2aa", "wcag21aa", "best-practice"],
+      "politeDelayMs": 2000,
+      "concurrency": 1,
+      "pageTimeoutMs": 45000
+    },
+    {
+      "siteId": "quick-check",
+      "name": "Quick Homepage Check",
+      "baseUrl": "https://your-website.com",
+      "includePatterns": ["^https://your-website\\.com/?$"],
+      "excludePatterns": [],
+      "maxDepth": 0,
+      "maxPages": 1,
+      "axeTags": ["wcag2aa"],
+      "politeDelayMs": 500,
+      "concurrency": 1,
+      "pageTimeoutMs": 15000
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "siteId": "example-site",
+  "generatedAt": "2026-01-23T04:37:48.304Z",
+  "pageCount": 0,
+  "successfulPages": 0,
+  "failedPages": 0,
+  "totals": {
+    "critical": 0,
+    "serious": 0,
+    "moderate": 0,
+    "minor": 0
+  },
+  "scanDuration": 6275
+}

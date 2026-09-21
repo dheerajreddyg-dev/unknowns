@@ -1,0 +1,66 @@
+{
+  "sites": [
+    {
+      "siteId": "example-site",
+      "name": "Example Website",
+      "baseUrl": "https://example.com",
+      "sitemapUrl": "https://example.com/sitemap.xml",
+      "includePatterns": [".*\\/blog\\/.*", ".*\\/products\\/.*"],
+      "excludePatterns": [".*\\/admin\\/.*", ".*\\/api\\/.*"],
+      "maxDepth": 3,
+      "maxPages": 50,
+      "axeTags": ["wcag2a", "wcag2aa", "wcag21aa"],
+      "politeDelayMs": 1000,
+      "concurrency": 2,
+      "pageTimeoutMs": 30000,
+      "auth": {
+        "type": "basic",
+        "username": "",
+        "password": ""
+      }
+    },
+    {
+      "siteId": "government-site",
+      "name": "Government Portal",
+      "baseUrl": "https://agency.gov",
+      "includePatterns": [".*"],
+      "excludePatterns": [".*\\/private\\/.*"],
+      "maxDepth": 4,
+      "maxPages": 100,
+      "axeTags": ["wcag2a", "wcag2aa", "wcag21aa", "section508"],
+      "politeDelayMs": 2000,
+      "concurrency": 1,
+      "pageTimeoutMs": 45000
+    },
+    {
+      "siteId": "comprehensive-scan",
+      "name": "Full Standard Coverage",
+      "baseUrl": "https://comprehensive-site.org",
+      "sitemapUrl": "https://comprehensive-site.org/sitemap.xml",
+      "includePatterns": [".*"],
+      "excludePatterns": [".*\\/test\\/.*", ".*\\/staging\\/.*"],
+      "maxDepth": 5,
+      "maxPages": 200,
+      "axeTags": ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22aa", "best-practice"],
+      "politeDelayMs": 500,
+      "concurrency": 3,
+      "pageTimeoutMs": 30000
+    }
+  ],
+  "globalDefaults": {
+    "maxDepth": 3,
+    "maxPages": 50,
+    "axeTags": ["wcag2a", "wcag2aa"],
+    "politeDelayMs": 1000,
+    "concurrency": 2,
+    "pageTimeoutMs": 30000,
+    "blockedDomains": [
+      "googletagmanager.com",
+      "google-analytics.com",
+      "facebook.net",
+      "doubleclick.net",
+      "googlesyndication.com",
+      "youtube.com"
+    ]
+  }
+}
